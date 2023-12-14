@@ -1,11 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html lang="fr" x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test menu</title>
+    <script defer src="https://unpkg.com/alpinejs"></script>
+  </head>
+  <body>
+    <a href="/fr"></a>
+    <!-- https://emmet.io/ -->
+    <!-- header>h1{Test de menu} -->
+    <header>
+      <button aria-controls="mainnav"
+      @click="menuIsOpen = ! menuIsOpen"
+      class="header__menubtn"
+      >
+      menu</button>
+      <h1>Alvar Aalto</h1>
+    </header>
+    <nav id="mainnav" x-show="menuIsOpen" x-transition.duration.800ms
+    class="menu"
+    >
+      <ul>
+        <li><a href="#">Exposition</a></li>
+        <li><a href="#">Présentation</a></li>
+        <li><a href="#">Oeuvre principale</a></li>
+        <li><a href="#">Chronologie des oeuvres</a></li>
+        <li><a href="#">Billetterie</a></li>
+      </ul>
+    </nav>
+    <!-- h2>lorem2^p>lorem -->
+    <p>
+        Bienvenu(e) sur ce site dont le thème principale est l’architecture, plus précisément sur Alvar Aalto un architecte finlandais du 20ème siècle.
+    </p>
+  </body>
 </html>

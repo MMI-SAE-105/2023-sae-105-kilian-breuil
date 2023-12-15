@@ -38,6 +38,62 @@
         <li><a href="Billetterie.html">Billetterie</a></li>
       </ul>
     </nav>
-
+    <div class="carrousel" x-data="{ 
+        hrefCourant: '#ecran-1',
+      }">
+          <button class="carrousel_btn carrousel_btn-avant" aria-label="slide précedant" @click="p=$refs.parent ; p.scrollLeft -= p.clientWidth">
+              &lt;</button><button class="carrousel_btn carrousel_btn-apres" aria-label="slide suivant" @click="p=$refs.parent ; p.scrollLeft += p.clientWidth">></button>
+          <div class="carrousel_parent-ecrans" x-ref="parent"
+          @scroll.debounce.250ms.passive="
+  hrefCourant = '#'+
+                    [...$refs.parent.children]
+                     .find(e=>e.getBoundingClientRect().x>=0)
+                     .id
+                                       "
+      >>
+              <div id="ecran-1" class="carrousel_ecran">
+                  <figure>
+                      <img src="https://picsum.photos/seed/1/500/300" alt="image ecran 1">
+                      <figcaption>Ecran 1</figcaption>
+                  </figure>
+              </div>
+              <div id="ecran-2" class="carrousel_ecran">
+                  <figure>
+                      <img src="https://picsum.photos/seed/2/500/300" alt="image ecran 2">
+                      <figcaption>Ecran 2</figcaption>
+                  </figure>
+              </div>
+              <div id="ecran-3" class="carrousel_ecran">
+                  <figure>
+                      <img src="https://picsum.photos/seed/3/500/300" alt="image ecran 3">
+                      <figcaption>Ecran 3</figcaption>
+                  </figure>
+              </div>
+              <div id="ecran-4" class="carrousel_ecran">
+                  <figure>
+                      <img src="https://picsum.photos/seed/4/500/300" alt="image ecran 4">
+                      <figcaption>Ecran 4</figcaption>
+                  </figure>
+              </div>
+              <div id="ecran-5" class="carrousel_ecran">
+                  <figure>
+                      <img src="https://picsum.photos/seed/5/500/300" alt="image ecran 5">
+                      <figcaption>Ecran 5</figcaption>
+                  </figure>
+              </div>
+          </div>
+          <ul class="caroussel_liste-liens">
+              <li><a href="#ecran-1" class="{actif:hrefCourant==='#ecran-1'}">ecran 1</a></li>
+              <li><a href="#ecran-2" class="caroussel_lien">ecran 2</a></li>
+              <li><a href="#ecran-3" class="caroussel_lien">ecran 3</a></li>
+              <li><a href="#ecran-4" class="caroussel_lien">ecran 4</a></li>
+              <li><a href="#ecran-5" class="caroussel_lien">ecran 5</a></li>
+          </ul>
+      </div>
+      <footer>
+        Alvar Aalto <img src="public/img/menu-et-présentation/logo-manquant/image 1.webp" alt="drapeau français changement de langue">
+        <img src="public/img/menu-et-présentation/Rectangle 17.webp" alt="image deco footer">
+        <img src="public/img/menu-et-présentation/logo-manquant/logo.webp" alt="logo footer">   <p>mention légales     <a href="Contactez nous.html">Contactez nous</a></p>
+    </footer>
 </body>
 </html>

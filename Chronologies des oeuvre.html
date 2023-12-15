@@ -7,6 +7,37 @@
     <title>Alvar Aalto</title>
 </head>
 <body>
-    
+    <!DOCTYPE html>
+<html lang="fr" x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alvar Aalto</title>
+    <script defer src="https://unpkg.com/alpinejs"></script>
+  </head>
+  <body>
+    <a href="/fr"></a>
+    <header>
+        <a href="index.html"><img src="public/img/menu-et-présentation/logo-manquant/logo-1.webp" alt="logo header"></a>
+      <button aria-controls="mainnav"
+      @click="menuIsOpen = ! menuIsOpen"
+      class="header__menubtn"
+      >
+      menu</button>
+      <h1>Alvar Aalto</h1>
+    </header>
+    <nav id="mainnav" x-show="menuIsOpen" x-transition.duration.800ms
+    class="menu"
+    >
+    <ul>
+        <li><a href="Exposition.html">Exposition</a></li>
+        <li><a href="Présentation.html">Présentation</a></li>
+        <li><a href="Oeuvres principales.html">Oeuvre principale</a></li>
+        <li><a href="Chronologies des oeuvre.html">Chronologie des oeuvres</a></li>
+        <li><a href="Billetterie.html">Billetterie</a></li>
+      </ul>
+    </nav>
+
 </body>
 </html>

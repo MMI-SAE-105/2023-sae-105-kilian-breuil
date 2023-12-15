@@ -1,0 +1,14 @@
+.btn {
+    padding: var(--space1x) var(--space2x);
+    border: 1px solid var(--black);
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 600;
+  }
+  
+  .btnLink {
+    color: var(--black);
+    text-decoration: none;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--black);
+  }

@@ -1,11 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Présentation</title>
-</head>
-<body>
-    
+<html lang="fr" x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alvar Aalto</title>
+    <script defer src="https://unpkg.com/alpinejs"></script>
+  </head>
+  <body>
+    <a href="/fr"></a>
+    <header>
+        <a href="index.html"><img src="public/img/menu-et-présentation/logo-manquant/logo-1.webp" alt="logo header"></a>
+      <button aria-controls="mainnav"
+      @click="menuIsOpen = ! menuIsOpen"
+      class="header__menubtn"
+      >
+      menu</button>
+      <h1>Alvar Aalto</h1>
+    </header>
+    <nav id="mainnav" x-show="menuIsOpen" x-transition.duration.800ms
+    class="menu"
+    >
+      <ul>
+        <li><a href="#">Exposition</a></li>
+        <li><a href="#">Présentation</a></li>
+        <li><a href="#">Oeuvre principale</a></li>
+        <li><a href="#">Chronologie des oeuvres</a></li>
+        <li><a href="#">Billetterie</a></li>
+      </ul>
+    </nav>
+    <h2>Présentation</h2>
+    <img src="public/img/menu-et-présentation/image 8.webp" alt="image Alvar Aalto">
+    <p>Son travail comprend également le mobilier, les textiles et la verrerie, ainsi que des sculptures et des peintures, bien qu'il n'ait jamais été considéré comme un artiste : il considère la peinture et la sculpture comme les “branches de l'arbre dont le tronc est l'architecture” .
+
+      Le début de carrière d'Aalto va de pair avec la croissance économique rapide et l'industrialisation de la Finlande, au cours de la première moitié du 20e siècle et bon nombre de ses clients étaient des industriels, dont la famille Ahlström-Gullichsen. </p>
+      <img src="public/img/menu-et-présentation/image 10.webp" alt="image de la famille Ahlström-Gullichsen">
+      <p>L'étendue de sa carrière, des années 1920 aux années 1970, se reflète dans les styles de son œuvre, allant du classicisme nordique des premières années, au modernisme rationnel de style international, dans les années 1930, en passant par un modernisme plus organique, à partir des années 1940. 
+
+        Cependant, ce qui caractérise toute sa carrière, c'est le souci du design en tant qu'œuvre d'art totale en Gesamtkunstwerk, qui fait qu'avec sa première femme Aino Aalto, il conçoit non seulement les bâtiments, mais aussi les surfaces intérieures, les meubles, lampes, ameublement et la verrerie. </p>
+        <img src="public/img/menu-et-présentation/image 11.webp" alt="image de Gesamtkunstwerk">
+        <p>Bien que la Finlande ne soit pas un pays scandinave, ses créations de meubles sont assimilées à du design scandinave, dans le sens d'un souci de matériaux, en particulier, le bois, et de simplification mais aussi d'expérimentation technique, ce qui lui a valu des brevets pour divers procédés de fabrication, tels que le bois courbé. Le musée Alvar Aalto, conçu par Aalto lui-même, est situé dans ce qui est considéré comme sa ville natale de Jyväskylä. Nombre de ses bâtiments s'intègrent de façon harmonieuse dans le paysage, avec lequel ils forment un tout architectural.
+
+          Le bois et la brique constituent ses matériaux de prédilection. </p>
+          <img src="public/img/menu-et-présentation/image 12.webp" alt="image d'un batiment  en brique par Alvar Aalto">
+          <p>Alvar Aalto a conçu lui-même les meubles pour la plupart de ses bâtiments. On lui doit entre autres la Villa Mairea à Noormarkku, la Maison Finlandia à Helsinki et le campus de l'université technique d'Helsinki. </p>
+          <footer>
+            Alvar Aalto <img src="public/img/menu-et-présentation/logo-manquant/image 1.webp" alt="drapeau français changement de langue">
+            <img src="public/img/menu-et-présentation/Rectangle 17.webp" alt="image deco footer">
+            <img src="public/img/menu-et-présentation/logo-manquant/logo.webp" alt="logo footer">   <p>mention légales     <a href="Contactez nous.html">Contactez nous</a></p>
+        </footer>
 </body>
 </html>

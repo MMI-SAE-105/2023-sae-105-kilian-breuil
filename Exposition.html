@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr" x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alvar Aalto</title>
+    <script defer src="https://unpkg.com/alpinejs"></script>
+  </head>
+  <body>
+    <a href="/fr"></a>
+    <header>
+        <a href="index.html"><img src="public/img/menu-et-présentation/logo-manquant/logo-1.webp" alt="logo header"></a>
+      <button aria-controls="mainnav"
+      @click="menuIsOpen = ! menuIsOpen"
+      class="header__menubtn"
+      >
+      menu</button>
+      <h1>Alvar Aalto</h1>
+    </header>
+    <nav id="mainnav" x-show="menuIsOpen" x-transition.duration.800ms
+    class="menu"
+    >
+      <ul>
+        <li><a href="Exposition.html">Exposition</a></li>
+        <li><a href="Présentation.html">Présentation</a></li>
+        <li><a href="Oeuvres principales.html">Oeuvre principale</a></li>
+        <li><a href="Chronologies des oeuvre.html">Chronologie des oeuvres</a></li>
+        <li><a href="Billetterie.html">Billetterie</a></li>
+      </ul>
+    </nav>
+    <h2>infos</h2>
+    <p>
+        Le titre de l’exposition : Alvar Aalto.</p>
+    <p>Dates et lieu</p>
+    <p>Venez a l’exposition de l’architecte finlandais Alvar Aalto, cette exposition aura lieux du 13 avril au 23 juin.</p>
+    <p>C’est ouvert tout les jours a partir de 11h jusqu’à 20h sauf le lundi, Il y a une nicturne le mardi jusqu’à 22h, la fermeture de certaine salle se feront a 19h45 (21h45 le mardi)</p>
+    <p>Cette exposition aura lieux à Paris à la Fondation Cartier, le 261 Bd Raspail</p>
+    <p>Tarifs :</p>
+    <p>Plein tarif => 11 €</p>
+    <p>Tarif réduit => 7.50 €</p>
+    <p>Réduction 13-25 => 5 €</p>
+    <p>Fondation Cartier pass => 18 - 50 €</p>
+    <p>Moins de 13 ans, Laissez-passer annuel, carte Icom, carte de presse, carte d'invalidité, Fondation Cartier Pass, Etudiants ⇒ Gratuit</p>
+    <footer>
+        Alvar Aalto <img src="public/img/menu-et-présentation/logo-manquant/image 1.webp" alt="drapeau français changement de langue">
+        <img src="public/img/menu-et-présentation/Rectangle 17.webp" alt="image deco footer">
+        <img src="public/img/menu-et-présentation/logo-manquant/logo.webp" alt="logo footer">   <p>mention légales     <a href="Contactez nous.html">Contactez nous</a></p>
+    </footer>
+</body>
+</html>
